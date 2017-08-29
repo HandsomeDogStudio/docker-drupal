@@ -7,5 +7,6 @@ cat config/drupal/settings.php >> web/sites/default/settings.php \
 && cp config/drupal/development.services.yml web/sites \
 && mv .idea-dist .idea && printf '%s\n' "${PWD##*/}" > .idea/.name \
 && mv .idea/.gitignore.dist .idea/.gitignore \
-&& sed -i 's/\.idea/\#.idea/g' .gitignore \
+&& sed -i 's/\.idea/\#.idea/g' gitignore.txt \
+&& mv gitignore.txt .gitignore \
 && printf "Your site is scaffolded. Run\n\t'docker-compose up --build'\nto spin up.\n"
